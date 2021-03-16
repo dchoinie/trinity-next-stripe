@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { Elements } from '@stripe/react-stripe-js'
 import getStripe from '../utils/get-stripejs'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import ElementsForm from '../components/ElementsForm'
 
 const DonatePage: NextPage = () => {

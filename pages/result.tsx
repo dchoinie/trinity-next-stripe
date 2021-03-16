@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import PrintObject from '../components/PrintObject'
 import Cart from '../components/Cart'
 import ClearCart from '../components/ClearCart'
