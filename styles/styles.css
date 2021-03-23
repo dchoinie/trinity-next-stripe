@@ -1,3 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+*,
+:before,
+:after {
+  font-family: "Karla", sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
+
+.hero {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("../public/images/IMG_9088.jpg");
+  height: 100vh;
+  margin-top: -123.2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @tailwind utilities;
