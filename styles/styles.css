@@ -6,13 +6,17 @@
   font-family: "Karla", sans-serif;
 }
 
+p {
+  color: #1f2937;
+}
+
 @tailwind base;
 @tailwind components;
 
 .hero {
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.25)
     ),
     url("../public/images/IMG_9088.jpg");
   height: 100vh;

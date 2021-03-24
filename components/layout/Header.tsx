@@ -85,7 +85,7 @@ const Header = (): JSX.Element => {
                 )}
             </div>
             <div className="hidden lg:flex justify-end items-center w-1/4">
-                <Button label="Support" bg="bg-transparent" bgHover="hover:bg-white" color="text-red-900" withIcon icon={<FaPrayingHands />} extraClassNames="border border-red-900 hover:border-white font-bold" />
+                <Button label="Donate" bg="bg-red-900" bgHover="hover:bg-red-900" color="text-white" withIcon icon={<FaPrayingHands />} extraClassNames="font-bold" />
             </div>
         </div>
     )
