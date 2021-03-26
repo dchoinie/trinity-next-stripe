@@ -30,6 +30,8 @@ const ServiceTimes = () => {
                             time3="7:00am"
                             months1="(Sep - May)"
                             months2="(Jun - Aug)"
+                            day1="Sundays"
+                            day2="Wednesdays"
                             summary="Holy Communion is celebrated at each of our Divine Services every Sunday, and on each Wednesday evening during the summer."
                         />
                     </div>
@@ -40,6 +42,13 @@ const ServiceTimes = () => {
                             />}
                             image={Card2}
                             imageAlt='Adult Bible Class &amp; Sunday School'
+                            dates1="School Year"
+                            months1="(Sep - May)"
+                            time1="9:00am"
+                            dates2="Summer Months"
+                            months2="(Jun - Aug)"
+                            day2="Family Bible Study"
+                            time3="8:00am"
                         />
                     </div>
                     <div className="w-1/3">

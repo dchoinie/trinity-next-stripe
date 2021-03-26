@@ -6,17 +6,19 @@ interface ServiceCardProps {
     image?: string;
     imageAlt?: string;
     dates1?: string;
-    months1: string;
+    months1?: string;
     dates2?: string;
     months2?: string;
     time1?: string;
     time2?: string;
     time3?: string;
     summary?: string;
+    day1?: string;
+    day2?: string;
 }
 
 const ServiceCard = (props: ServiceCardProps) => {
-    const { title, icon, image, imageAlt, dates1, dates2, time1, time2, time3, months1, months2, summary } = props
+    const { title, icon, image, imageAlt, dates1, dates2, time1, time2, time3, months1, months2, summary, day1, day2 } = props
     return (
         <div className="rounded shadow-lg border border-gray-100">
             <img src={image} alt={imageAlt} className="w-full rounded-tl rounded-tr h-64" />
@@ -31,21 +33,21 @@ const ServiceCard = (props: ServiceCardProps) => {
                {dates1 && (
                 <div className="grid grid-cols-2 gap-y-4">
                     <div className="flex flex-col items-center">
-                        <span>{dates1}</span>
+                        <span className="underline">{dates1}</span>
                         <span>{months1}</span>
                     </div>
                     <div className="flex flex-col self-center items-center">
-                        <span className="italic">Sundays</span>
+                        <span className="underline">{day1}</span>
                         <span>{time1}</span>
                     </div>
                     <div className="flex flex-col self-center items-center">
-                        <span>{dates2}</span>
+                        <span className="underline">{dates2}</span>
                         <span>{months2}</span>
                     </div>
                     <div className="flex flex-col self-center items-center">
-                        <span className="italic">Sundays</span>
+                        <span className="underline">{day1}</span>
                         <span>{time2}</span>
-                        <span className="italic">Wednesdays</span>
+                        <span className="underline">{day2}</span>
                         <span>{time3}</span>
                     </div>
                 </div>
