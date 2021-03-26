@@ -30,7 +30,7 @@ const Footer = () => {
         },
     ]
     return (
-        <div className="bg-red-900">
+        <div className="bg-custom-blue">
             <div className="max-w-screen-xl mx-auto py-12">
                <div className="flex flex-col items-center">
                    <ul className="flex mb-4">

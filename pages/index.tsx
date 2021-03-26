@@ -3,6 +3,8 @@ import Layout from '../components/layout/Layout'
 import Hero from '../components/Hero'
 import OurChurch from '../components/OurChurch'
 import ServiceTimes from '../components/ServiceTimes'
+import Support from '../components/Support'
+import Events from '../components/Events'
 
 const IndexPage: NextPage = () => {
   return (
@@ -10,6 +12,8 @@ const IndexPage: NextPage = () => {
       <Hero />
       <OurChurch />
       <ServiceTimes />
+      <Support />
+      <Events />
     </Layout>
   )
 }

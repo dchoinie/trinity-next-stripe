@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Button from '../../components/Button'
 import { FaBars, FaEnvelope, FaFacebook, FaPrayingHands, FaYoutube } from 'react-icons/fa'
 import { GrClose } from 'react-icons/gr'
+import Link from 'next/link'
 
 
 const Header = (): JSX.Element => {
@@ -10,7 +11,7 @@ const Header = (): JSX.Element => {
     return (
         <div className="max-w-screen-xl block lg:flex lg:flex-row mx-auto py-2">
             <div className="flex w-full justify-between lg:w-1/4 px-4 lg:pl-0 mb-2 lg:mb-0">
-                <ul className="flex items-center text-red-900">
+                <ul className="flex items-center text-custom-blue">
                     <li className="mr-2">
                         <FaFacebook className="text-lg" />
                     </li>
@@ -31,25 +32,29 @@ const Header = (): JSX.Element => {
             </div>
             <div className="flex lg:w-1/2">
                 <ul className="hidden lg:flex w-full flex-row text-base justify-around items-center">
-                    <li className="font-bold text-red-800 lg:hover:text-gray-200">
+                    <li className="font-bold text-custom-blue lg:hover:text-gray-200">
                         <span>Home</span>
                     </li>
-                    <li className="font-bold text-red-800 hover:text-gray-200">
+                    <li className="font-bold text-custom-blue hover:text-gray-200">
                         <span>Our Church</span>
                     </li>
-                    <li className="font-bold text-red-800 hover:text-gray-200">
+                    <li className="font-bold text-custom-blue hover:text-gray-200">
                         <span>Resources</span>
                     </li>
                     <li>
-                        <Image src="/images/LCMS_logo.png" width={75} height={100} />
+                        <Link href="/">
+                            <a>
+                                <Image src="/images/LCMS_logo.png" width={75} height={100} />
+                            </a>
+                        </Link>
                     </li>
-                    <li className="font-bold text-red-800 hover:text-gray-200">
+                    <li className="font-bold text-custom-blue hover:text-gray-200">
                         <span>Events</span>
                     </li>
-                    <li className="font-bold text-red-800 hover:text-gray-200">
+                    <li className="font-bold text-custom-blue hover:text-gray-200">
                         <span>Gallery</span>
                     </li>
-                    <li className="font-bold text-red-800 hover:text-gray-200">
+                    <li className="font-bold text-custom-blue hover:text-gray-200">
                         <span>Contact</span>
                     </li>
                 </ul>
@@ -85,7 +90,7 @@ const Header = (): JSX.Element => {
                 )}
             </div>
             <div className="hidden lg:flex justify-end items-center w-1/4">
-                <Button label="Donate" bg="bg-red-900" bgHover="hover:bg-red-900" color="text-white" withIcon icon={<FaPrayingHands />} extraClassNames="font-bold" />
+                <Button label="Donate" bg="bg-custom-blue" bgHover="hover:bg-custom-blue" color="text-white" icon={<FaPrayingHands />} extraClassNames="font-bold" />
             </div>
         </div>
     )
