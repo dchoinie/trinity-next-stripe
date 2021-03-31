@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import Button from '../../components/Button'
 import { FaBars, FaEnvelope, FaFacebook, FaPrayingHands, FaYoutube } from 'react-icons/fa'
 import { GrClose } from 'react-icons/gr'
-import Link from 'next/link'
 
 
 const Header = (): JSX.Element => {
@@ -33,13 +33,25 @@ const Header = (): JSX.Element => {
             <div className="flex lg:w-1/2">
                 <ul className="hidden lg:flex w-full flex-row text-base justify-around items-center">
                     <li className="font-bold text-custom-blue lg:hover:text-gray-200">
-                        <span>Home</span>
+                        <Link href="/">
+                            <a>
+                                Home
+                            </a>
+                        </Link>
                     </li>
                     <li className="font-bold text-custom-blue hover:text-gray-200">
-                        <span>Our Church</span>
+                        <Link href="/our-church">
+                            <a>
+                                Our Church
+                            </a>
+                        </Link>
                     </li>
                     <li className="font-bold text-custom-blue hover:text-gray-200">
-                        <span>Resources</span>
+                        <Link href="/resources">
+                            <a>
+                                Resources
+                            </a>
+                        </Link>
                     </li>
                     <li>
                         <Link href="/">
@@ -49,13 +61,25 @@ const Header = (): JSX.Element => {
                         </Link>
                     </li>
                     <li className="font-bold text-custom-blue hover:text-gray-200">
-                        <span>Events</span>
+                        <Link href="/events">
+                            <a>
+                                Events
+                            </a>
+                        </Link>
                     </li>
                     <li className="font-bold text-custom-blue hover:text-gray-200">
-                        <span>Gallery</span>
+                        <Link href="/gallery">
+                            <a>
+                                Gallery
+                            </a>
+                        </Link>
                     </li>
                     <li className="font-bold text-custom-blue hover:text-gray-200">
-                        <span>Contact</span>
+                        <Link href="/">
+                            <a>
+                                Contact
+                            </a>
+                        </Link>
                     </li>
                 </ul>
                 {isOpen && (

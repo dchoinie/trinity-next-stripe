@@ -15,47 +15,58 @@ interface ServiceCardProps {
     summary?: string;
     day1?: string;
     day2?: string;
+    otherSection?: string;
 }
 
 const ServiceCard = (props: ServiceCardProps) => {
-    const { title, icon, image, imageAlt, dates1, dates2, time1, time2, time3, months1, months2, summary, day1, day2 } = props
+    const { title, icon, image, imageAlt, dates1, dates2, time1, time2, time3, months1, months2, summary, day1, day2, otherSection } = props
     return (
-        <div className="rounded shadow-lg border border-gray-100">
-            <img src={image} alt={imageAlt} className="w-full rounded-tl rounded-tr h-64" />
-            <div className="p-6">
-               <div className="flex flex-col items-center">
-                    {icon ? <div className="mb-2">{icon}</div> : null}
-                    <h2 className="text-xl text-gray-700 text-center">
-                        {title}
-                    </h2>
-               </div>
-               <hr className="my-2 w-1/2 mx-auto"/>
-               {dates1 && (
-                <div className="grid grid-cols-2 gap-y-4">
+        <div className="rounded shadow-lg border border-gray-100 h-full">
+            <div className="flex flex-col h-full justify-between">
+                <div>
+                <img src={image} alt={imageAlt} className="w-full rounded-tl rounded-tr h-64" />
+                    <div className="p-6">
                     <div className="flex flex-col items-center">
-                        <span className="underline">{dates1}</span>
-                        <span>{months1}</span>
+                            {icon ? <div className="mb-2">{icon}</div> : null}
+                            <h2 className="text-xl text-gray-700 text-center">
+                                {title}
+                            </h2>
                     </div>
-                    <div className="flex flex-col self-center items-center">
-                        <span className="underline">{day1}</span>
-                        <span>{time1}</span>
-                    </div>
-                    <div className="flex flex-col self-center items-center">
-                        <span className="underline">{dates2}</span>
-                        <span>{months2}</span>
-                    </div>
-                    <div className="flex flex-col self-center items-center">
-                        <span className="underline">{day1}</span>
-                        <span>{time2}</span>
-                        <span className="underline">{day2}</span>
-                        <span>{time3}</span>
+                    <hr className="my-2 w-1/2 mx-auto"/>
+                    {dates1 ? (
+                        <div className="grid grid-cols-2 gap-y-4">
+                            <div className="flex flex-col items-center">
+                                <span className="underline">{dates1}</span>
+                                <span>{months1}</span>
+                            </div>
+                            <div className="flex flex-col self-center items-center">
+                                <span className="underline">{day1}</span>
+                                <span>{time1}</span>
+                            </div>
+                            <div className="flex flex-col self-center items-center">
+                                <span className="underline">{dates2}</span>
+                                <span>{months2}</span>
+                            </div>
+                            <div className="flex flex-col self-center items-center">
+                                <span className="underline">{day1}</span>
+                                <span>{time2}</span>
+                                <span className="underline">{day2}</span>
+                                <span>{time3}</span>
+                            </div>
+                        </div>
+                    ) : (
+                        <div>
+                            {otherSection}
+                        </div>
+                    )}
                     </div>
                 </div>
-               )}
-           </div>
-            <div className="bg-custom-blue text-gray-200 rounded-bl rounded-br">
-                <div className="p-6 text-center">
-                    {summary}
+                <div>
+                    <div className="flex bg-custom-blue text-gray-200 rounded-bl rounded-br h-36">
+                        <div className="p-6 text-center self-center">
+                            {summary}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

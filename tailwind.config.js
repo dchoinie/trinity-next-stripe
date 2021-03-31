@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         sienna: "#960005",
         "custom-blue": "#005595",
+        "custom-blue-lighter": "#3388C8",
       },
     },
   },

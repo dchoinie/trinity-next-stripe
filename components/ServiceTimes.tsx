@@ -49,6 +49,7 @@ const ServiceTimes = () => {
                             months2="(Jun - Aug)"
                             day2="Family Bible Study"
                             time3="8:00am"
+                            summary="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi dignissimos distinctio accusamus a tempora repellat in minima itaque."
                         />
                     </div>
                     <div className="w-1/3">
@@ -57,6 +58,8 @@ const ServiceTimes = () => {
                             icon={<BiCalendarStar className="text-2xl text-custom-blue" />}
                             image={Card3}
                             imageAlt='Special Services'
+                            summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, cum! Nihil corporis sequi earum quaerat voluptate. Est molestiae temporibus doloribus tenetur?"
+                            otherSection="Additional opportunities to hear God’s Word and receive the Lord’s Supper are offered during the seasons of Advent and Lent. Please check our church calendar for the dates and times of these services."
                         />
                     </div>
                 </div>

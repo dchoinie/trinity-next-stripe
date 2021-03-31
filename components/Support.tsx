@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 import { FaPrayingHands } from 'react-icons/fa'
 import Button from './Button'
 
 const Support = () => {
     return (
-        <div className="bg-custom-blue py-20">
+        <div className="stainedGlass py-32 my-32">
             <div className="max-w-screen-xl mx-auto">
                 <div className="flex w-full justify-between">
                     <div className="flex flex-col">
@@ -16,14 +17,18 @@ const Support = () => {
                             Make a donation today
                         </h2>
                     </div>
-                    <div className="flex">
-                        <Button
-                            label="Donate"
-                            bg="bg-white"
-                            color="text-gray-700"
-                            extraClassNames="self-center text-2xl"
-                            icon={<FaPrayingHands />}
-                        />
+                    <div className="flex self-center">
+                        <Link href="/donate">
+                            <a>
+                                <Button
+                                    label="Donate"
+                                    bg="bg-white"
+                                    color="text-gray-700"
+                                    extraClassNames="self-center text-2xl shadow-md"
+                                    icon={<FaPrayingHands />}
+                                />
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
