@@ -5,6 +5,9 @@ import ServiceCard from './ServiceCard'
 import Card1 from '../public/images/painting1.png'
 import Card2 from '../public/images/painting2.png'
 import Card3 from '../public/images/painting3.png'
+import Button from './Button'
+import { FaYoutube } from 'react-icons/fa'
+import Link from 'next/link'
 
 const ServiceTimes = () => {
     return (
@@ -15,7 +18,7 @@ const ServiceTimes = () => {
                     subTitle="We invite you to join us and grow in the grace and knowledge of Jesus Christ our Savior."
                     icon={<BiCalendarEvent className="text-custom-blue text-4xl mb-2" />} 
                 />
-                <div className="flex w-full gap-12 text-gray-600">
+                <div className="flex w-full gap-12 text-gray-600 mb-24">
                     <div className="w-1/3">
                         <ServiceCard 
                             title="Divine Service" 
@@ -62,6 +65,16 @@ const ServiceTimes = () => {
                             otherSection="Additional opportunities to hear God’s Word and receive the Lord’s Supper are offered during the seasons of Advent and Lent. Please check our church calendar for the dates and times of these services."
                         />
                     </div>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                    <h5>Due to COVID19, Trinity Evangelical Lutheran Church is temporarily live streaming our Sunday services on YouTube. Click below to access our live streams.</h5>
+                    <aside className="mb-2 text-gray-600 italic">*The live stream for the current Sunday will show up shortly prior to the start of the service. Try refreshing the page if you do not see it.*</aside>
+                    <Link href="/services">
+                        <a className="flex text-lg font-medium px-5 py-2 rounded shadow-md bg-custom-blue text-gray-200">
+                            <span className="mr-2">Live Streams</span>
+                            <FaYoutube className="self-center" />
+                        </a>
+                    </Link>
                 </div>
            </div>
         </div>

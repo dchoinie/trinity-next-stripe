@@ -32,21 +32,21 @@ const Header = (): JSX.Element => {
             </div>
             <div className="flex lg:w-1/2">
                 <ul className="hidden lg:flex w-full flex-row text-base justify-around items-center">
-                    <li className="font-bold text-custom-blue lg:hover:text-gray-200">
+                    <li className="text-custom-blue lg:hover:text-gray-200">
                         <Link href="/">
                             <a>
                                 Home
                             </a>
                         </Link>
                     </li>
-                    <li className="font-bold text-custom-blue hover:text-gray-200">
+                    <li className="text-custom-blue hover:text-gray-200">
                         <Link href="/our-church">
                             <a>
                                 Our Church
                             </a>
                         </Link>
                     </li>
-                    <li className="font-bold text-custom-blue hover:text-gray-200">
+                    <li className="text-custom-blue hover:text-gray-200">
                         <Link href="/resources">
                             <a>
                                 Resources
@@ -60,21 +60,21 @@ const Header = (): JSX.Element => {
                             </a>
                         </Link>
                     </li>
-                    <li className="font-bold text-custom-blue hover:text-gray-200">
+                    <li className="text-custom-blue hover:text-gray-200">
                         <Link href="/events">
                             <a>
                                 Events
                             </a>
                         </Link>
                     </li>
-                    <li className="font-bold text-custom-blue hover:text-gray-200">
+                    <li className="text-custom-blue hover:text-gray-200">
                         <Link href="/gallery">
                             <a>
                                 Gallery
                             </a>
                         </Link>
                     </li>
-                    <li className="font-bold text-custom-blue hover:text-gray-200">
+                    <li className="text-custom-blue hover:text-gray-200">
                         <Link href="/">
                             <a>
                                 Contact
