@@ -65,7 +65,7 @@ const Header = (): JSX.Element => {
                             </Link>
                         </li>
                         <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1">
-                            <Link href="/">
+                            <Link href="/contact">
                                 <a className="tracking-wide">
                                     Contact
                                 </a>

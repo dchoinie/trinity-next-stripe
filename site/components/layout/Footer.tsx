@@ -82,14 +82,14 @@ const Footer = () => {
                         <h6 className="text-custom-blue mb-4 font-bold">
                             Stay Updated
                         </h6>
-                        <p className="text-gray-600 mb-2">Subscribe to our newsletter for the latests news from Trinity Evangelical Lutheran Church</p>
+                        <p className="text-gray-600 mb-2">Subscribe to our newsletter for the latest news from Trinity Evangelical Lutheran Church</p>
                         <form action="https://trinitywaterville.us1.list-manage.com/subscribe/post" method="POST">
-                        <input type="hidden" name="u" value="f63d0bb6003096c48a2ff3527" />
-                        <div className="flex">
-                            <input type="email" name="MERGE0" id="MERGE0" size={25} placeholder="email" className="p-2 rounded-tl rounded-bl" required />
-                            <button type="submit" className="bg-custom-blue text-gray-200 p-2 rounded-tr rounded-br">Sign Up</button>
-                        </div>
-                        <input type="hidden" name="id" value="0cff9ce894" />
+                            <input type="hidden" name="u" value="f63d0bb6003096c48a2ff3527" />
+                            <div className="flex">
+                                <input type="email" name="MERGE0" id="MERGE0" size={25} placeholder="email" className="p-2 rounded-tl rounded-bl" required />
+                                <button type="submit" className="bg-custom-blue text-gray-200 p-2 rounded-tr rounded-br">Sign Up</button>
+                            </div>
+                            <input type="hidden" name="id" value="0cff9ce894" />
                         </form>
                     </div>
                 </div>
