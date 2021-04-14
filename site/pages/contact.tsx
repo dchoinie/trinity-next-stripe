@@ -35,7 +35,9 @@ const Map = (): JSX.Element => {
 
 const ContactForm = (): JSX.Element => {
     return (
-        <div>Contact Form</div>
+        <form method="POST" action="">
+
+        </form>
     )
 }
 
