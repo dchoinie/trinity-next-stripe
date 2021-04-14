@@ -23,7 +23,7 @@ export async function getServerSideProps() {
   }
 }
 
-const services: NextPage = ({ data }) => {
+const services: NextPage<{data: any}> = ({ data }) => {
     console.log(data);
     
     return (
