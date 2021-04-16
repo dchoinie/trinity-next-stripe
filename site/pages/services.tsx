@@ -10,7 +10,7 @@ export interface YouTubeVideo {
     snippet: any;
 }
 
-const YOUTUBE_PLAYLIST_ITEMS_API= 'https://www.googleapis.com/youtube/v3/playlistItems'
+const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
 
 export async function getServerSideProps() {
   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PL7X8q67S09NqHTVrqomRdOSO4wGpPV6_0&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
