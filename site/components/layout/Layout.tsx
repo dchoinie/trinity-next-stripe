@@ -7,11 +7,13 @@ import Footer from './Footer'
 type Props = {
   children: ReactNode
   title?: string
+  verseData?: any;
 }
 
 const Layout = ({
   children,
   title = 'Trinity Evangelical Lutheran Church',
+  verseData,
 }: Props) => (
   <>
     <Head>
@@ -21,7 +23,7 @@ const Layout = ({
     </Head>
     <Header />
     {children}
-    <Footer />
+    <Footer verseData={verseData} />
   </>
 )
 

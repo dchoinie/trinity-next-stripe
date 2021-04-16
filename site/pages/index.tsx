@@ -6,8 +6,21 @@ import OurChurch from '../components/OurChurch'
 import ServiceTimes from '../components/ServiceTimes'
 import Support from '../components/Support'
 import Events from '../components/Events'
+import fetch from 'node-fetch';
 
-const IndexPage: NextPage = () => {
+export const getServerSideProps = async () => {
+  const result = await fetch(
+      `https://beta.ourmanna.com/api/v1/get/?format=json&order=random`
+    ).then((response) => response.json());
+
+  return {
+    props: {
+      data: result,
+    },
+  }
+}
+
+const IndexPage: NextPage<{data: any}> = ({data}) => {  
   return (
     <>
     <Head>
@@ -18,7 +31,7 @@ const IndexPage: NextPage = () => {
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="theme-color" content="#ffffff" />
     </Head>
-    <Layout title="Trinity Evangelical Lutheran Church">
+    <Layout title="Trinity Evangelical Lutheran Church" verseData={data}>
       <Hero />
       <OurChurch />
       <ServiceTimes />
