@@ -12,13 +12,13 @@ const Header = (): JSX.Element => {
         <nav className="bg-custom-blue relative shadow-md">
             <div className="max-w-screen-xl block lg:flex lg:flex-row mx-auto py-3">
                 <div className="flex w-full justify-between lg:w-1/4 px-4 lg:pl-0 mb-2 lg:mb-0">
-                    <div className="bg-gray-100 absolute top-0 p-4 rounded-bl rounded-br shadow-md">
-                        <Link href="/">
-                            <a>
+                    <Link href="/">
+                        <a>
+                            <div className="bg-gray-100 absolute top-0 p-4 rounded-bl rounded-br shadow-md">
                                 <img src={Logo} alt="LCMS Logo" className="w-16" />
-                            </a>
-                        </Link>
-                    </div>
+                            </div>
+                        </a>
+                    </Link>
                     <div className="self-center lg:hidden">
                         {isOpen ? (
                             <GrClose className="text-2xl text-gray-600" onClick={() => setIsOpen(!isOpen)} />
