@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import cx from 'classnames'
 import { FaFacebook, FaYoutube } from 'react-icons/fa'
 import Logo from '../../public/images/LCMS_logo.png'
 
@@ -101,7 +102,7 @@ const Footer: React.FC<{verseData: any}> = ({verseData}) => {
                         </div>
                     </div>
                     <hr className="my-6 border-custom-blue"/>
-                    <div className="flex justify-center">
+                    <div className={cx('flex', 'justify-center', verseData ? '' : 'pb-6')}>
                     {socialLinks.map((socialLink) => {
                         return (
                             <div className="flex mr-4" key={socialLink.title}>
@@ -115,15 +116,19 @@ const Footer: React.FC<{verseData: any}> = ({verseData}) => {
                         )
                     })}
                     </div>
-                    <hr className="my-6 border-custom-blue"/>
-                    <div className="flex flex-col items-center pb-6">
-                        <p className="italic">
-                            {verseData.verse.details.text}
-                        </p>
-                        <p>
-                            -{verseData.verse.details.reference}
-                        </p>
-                    </div>
+                    {verseData && (
+                        <>
+                            <hr className="my-6 border-custom-blue"/>
+                            <div className="flex flex-col items-center pb-6">
+                                <p className="italic text-center">
+                                    {verseData.verse.details.text}
+                                </p>
+                                <p>
+                                    -{verseData.verse.details.reference}
+                                </p>
+                            </div>
+                        </>
+                    )}
                 </div>
                 <div className="bg-custom-blue">
                     <div className="max-w-screen-xl mx-auto flex w-full justify-between py-6 text-gray-200">
