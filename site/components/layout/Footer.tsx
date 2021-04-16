@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import React from 'react'
+import Link from 'next/link'
 import { FaEnvelope, FaFacebook, FaYoutube } from 'react-icons/fa'
 import Logo from '../../public/images/LCMS_logo.png'
 
