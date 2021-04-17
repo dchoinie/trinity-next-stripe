@@ -39,41 +39,42 @@ const ContactForm = (): JSX.Element => {
     return (
         <div className="max-w-screen-xl mx-auto mb-24">
             <SectionHeading title="Contact Us" subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, delectus?" />
-            <div className="flex gap-12">
-                <form method="POST" action="https://formspree.io/f/xjvjvnpp" className="w-1/2">
+            <div className="flex gap-12 rounded border border-gray-200">
+                <form method="POST" action="https://formspree.io/f/xjvjvnpp" className="w-2/3 p-6">
                     <div className="flex gap-6 mb-6">
                         <label htmlFor="firstName" hidden>First Name</label>
-                        <input type="text" name="firstName" id="firstName" className="w-1/2 p-2 border border-gray-200 rounded shadow-md" placeholder="First Name" required />
+                        <input type="text" name="firstName" id="firstName" className="w-1/2 p-2 border border-gray-200 rounded shadow" placeholder="First Name" required />
                         <label htmlFor="lastName" hidden>Last Name</label>
-                        <input type="text" name="lastName" id="lastName" className="w-1/2 p-2 border border-gray-200 rounded shadow-md" placeholder="Last Name" required />
+                        <input type="text" name="lastName" id="lastName" className="w-1/2 p-2 border border-gray-200 rounded shadow" placeholder="Last Name" required />
                     </div>
                     <div className="flex gap-6 mb-6">
                         <label htmlFor="email" hidden>First Name</label>
-                        <input type="email" name="email" id="email" className="w-1/2 p-2 border border-gray-200 rounded shadow-md" placeholder="Email" required />
+                        <input type="email" name="email" id="email" className="w-1/2 p-2 border border-gray-200 rounded shadow" placeholder="Email" required />
                         <label htmlFor="lastName" hidden>Last Name</label>
-                        <input type="tel" name="phone" id="phone" className="w-1/2 p-2 border border-gray-200 rounded shadow-md" placeholder="Phone" />
+                        <input type="tel" name="phone" id="phone" className="w-1/2 p-2 border border-gray-200 rounded shadow" placeholder="Phone" />
                     </div>
                     <div className="flex mb-6">
-                        <textarea name="message" id="message" cols={30} rows={10} className="w-full p-2 border border-gray-200 rounded shadow-md" placeholder="Message"></textarea>
+                        <textarea name="message" id="message" cols={30} rows={10} className="w-full p-2 border border-gray-200 rounded shadow" placeholder="Message"></textarea>
                     </div>
                     <div className="flex">
-                        <button type="submit" className="flex text-lg font-medium px-5 py-2 rounded shadow-md bg-custom-blue text-gray-200">
+                        <button type="submit" className="flex text-lg font-medium px-5 py-2 rounded shadow bg-custom-blue text-gray-200">
                            Submit
                         </button>
                     </div>
                 </form>
-                <div className="flex flex-col w-1/2">
-                    <div className="flex gap-3 text-gray-800 mb-3">
+                <div className="flex flex-col w-1/3 bg-custom-blue p-6 rounded-tr rounded-br text-gray-200">
+                    <h5 className="mb-6">Contact Information</h5>
+                    <div className="flex gap-3 mb-3">
                         <BiMap className="text-2xl" />
-                        <p className="self-center">415 Lake Street West, Waterville, MN 56096</p>
+                        <p className="self-center text-gray-200">415 Lake Street West, Waterville, MN 56096</p>
                     </div>
-                    <div className="flex gap-3 text-gray-800 mb-3">
+                    <div className="flex gap-3 mb-3">
                         <BiPhone className="text-2xl" />
-                        <p className="self-center">507.362.4454</p>
+                        <p className="self-center text-gray-200">507.362.4454</p>
                     </div>
-                    <div className="flex gap-3 text-gray-800 mb-3">
+                    <div className="flex gap-3 mb-3">
                         <BiEnvelope className="text-2xl" />
-                        <p className="self-center">tlchurch@frontiernet.net</p>
+                        <p className="self-center text-gray-200">tlchurch@frontiernet.net</p>
                     </div>
                 </div>
             </div>
