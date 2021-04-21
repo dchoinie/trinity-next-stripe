@@ -28,5 +28,76 @@ export default createSchema({
         },
       ],
     },
+    {
+      title: "Sermons",
+      name: "sermons",
+      type: "document",
+      fields: [
+        {
+          title: "Title",
+          name: "title",
+          type: "string",
+        },
+        {
+          title: "Date",
+          name: "date",
+          type: "date",
+          options: {
+            dateFormat: "YYYY-MM-DD",
+            calendarTodayLabel: "Today",
+          },
+        },
+        {
+          title: "Sermon PDF",
+          name: "sermonPDF",
+          type: "file",
+        },
+      ],
+    },
+    {
+      title: "Bulletins",
+      name: "bulletins",
+      type: "document",
+      fields: [
+        {
+          title: "Date",
+          name: "date",
+          type: "date",
+          options: {
+            dateFormat: "YYYY-MM-DD",
+            calendarTodayLabel: "Today",
+          },
+        },
+        {
+          title: "Sermon PDF",
+          name: "sermonPDF",
+          type: "file",
+        },
+      ],
+    },
+    {
+      title: "Gallery",
+      name: "gallery",
+      type: "document",
+      fields: [
+        {
+          title: "Gallery Name",
+          name: "galleryName",
+          type: "string",
+        },
+        {
+          name: "images",
+          type: "array", // supports drag'n'drop of multiple files
+          options: {
+            layout: "grid",
+          },
+          of: [
+            {
+              type: "image",
+            },
+          ],
+        },
+      ],
+    },
   ]),
 });
