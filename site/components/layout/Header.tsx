@@ -8,6 +8,7 @@ import { GrClose } from 'react-icons/gr'
 
 const Header = (): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false)
     return (
         <nav className="bg-custom-blue relative shadow-md">
             <div className="max-w-screen-xl block lg:flex lg:flex-row mx-auto py-3">
@@ -43,12 +44,23 @@ const Header = (): JSX.Element => {
                                 </a>
                             </Link>
                         </li>
-                        <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1">
-                            <Link href="/resources">
-                                <a className="tracking-wide">
-                                    Resources
-                                </a>
-                            </Link>
+                        <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1" onMouseEnter={():void => setIsResourcesOpen(true)} onMouseLeave={(): void => setIsResourcesOpen(false)}>
+                            <span className="traking-wide relative">Resources</span>
+                            {isResourcesOpen && (
+                                <div className="absolute bg-gray-200 w-44 rounded shadow-md py-2 px-4">
+                                    <ul className="flex-flex-col text-gray-800">
+                                        <li className="mt-2 mb-2">
+                                            <Link href="/sermons">
+                                                <a className="tracking-wide">Sermons</a>
+                                            </Link>
+                                        </li>
+                                        <li className="mb-2">Resource 2</li>
+                                        <li className="mb-2">Resource 3</li>
+                                        <li className="mb-2">Resource 4</li>
+                                        <li className="mb-2">Resource 5</li>
+                                    </ul>
+                                </div>
+                            )}
                         </li>
                         <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1">
                             <Link href="/events">
@@ -73,34 +85,7 @@ const Header = (): JSX.Element => {
                         </li>
                     </ul>
                     {isOpen && (
-                        <ul className="lg:hidden flex flex-col w-full p-2">
-                            <div className="border border-gray-200 rounded- shadow-">
-                                <li className="py-2 mt-1 border-l-4 border-transparent text-gray-600 font-medium hover:border-blue-600 hover:bg-indigo-100 hover:text-indigo-600 lg:border-0">
-                                    <span className="pl-4">Home</span>
-                                </li>
-                                <li className="py-2 border-l-4 border-transparent text-gray-600 font-medium hover:border-blue-600 hover:bg-indigo-100 hover:text-indigo-600 lg:border-0">
-                                    <span className="pl-4">Our Church</span>
-                                </li>
-                                <li className="py-2 border-l-4 border-transparent text-gray-600 font-medium hover:border-blue-600 hover:bg-indigo-100 hover:text-indigo-600 lg:border-0">
-                                    <span className="pl-4">Resources</span>
-                                </li>
-                                <li className="py-2 border-l-4 border-transparent text-gray-600 font-medium hover:border-blue-600 hover:bg-indigo-100 hover:text-indigo-600 lg:border-0">
-                                    <span className="pl-4">Events</span>
-                                </li>
-                                <li className="py-2 border-l-4 border-transparent text-gray-600 font-medium hover:border-blue-600 hover:bg-indigo-100 hover:text-indigo-600 lg:border-0">
-                                    <span className="pl-4">Gallery</span>
-                                </li>
-                                <li className="py-2 border-l-4 border-transparent text-gray-600 font-medium hover:border-blue-600 hover:bg-indigo-100 hover:text-indigo-600 lg:border-0">
-                                    <span className="pl-4">Contact</span>
-                                </li>
-                                <li className="flex justify-center py-2 font-medium text-gray-600 bg-gray-100 hover:bg-indigo-100 hover:text-indigo-600 rounded-bl- rounded-br-">
-                                    <div className="flex">
-                                        <span className="mr-2">Support</span>
-                                        <FaPrayingHands className="self-center" />
-                                    </div>
-                                </li>
-                            </div>
-                        </ul>
+                        <div>mobile menu</div>
                     )}
                 </div>
                 <div className="hidden lg:flex justify-end items-center w-1/4">
