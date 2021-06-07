@@ -39,8 +39,8 @@ const ContactForm = (): JSX.Element => {
     return (
         <div className="max-w-screen-xl mx-auto mb-24">
             <SectionHeading title="Contact Us" subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, delectus?" />
-            <div className="flex gap-12 rounded border border-gray-200">
-                <form method="POST" action="https://formspree.io/f/xjvjvnpp" className="w-2/3 p-6">
+            <div className="flex gap-12 rounded">
+                <form method="POST" action="https://formspree.io/f/xjvjvnpp" className="w-2/3 px-6">
                     <div className="flex gap-6 mb-6">
                         <label htmlFor="firstName" hidden>First Name</label>
                         <input type="text" name="firstName" id="firstName" className="w-1/2 p-2 border border-gray-200 rounded shadow" placeholder="First Name" required />
@@ -62,7 +62,7 @@ const ContactForm = (): JSX.Element => {
                         </button>
                     </div>
                 </form>
-                <div className="flex flex-col w-1/3 bg-custom-blue p-6 rounded-tr rounded-br text-gray-200">
+                <div className="flex flex-col w-1/3 bg-custom-blue p-6 rounded text-gray-200">
                     <h5 className="mb-6">Contact Information</h5>
                     <div className="flex gap-3 mb-3">
                         <BiMap className="text-2xl" />

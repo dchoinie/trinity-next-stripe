@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaChurch } from 'react-icons/fa'
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import Trinity from '../public/images/IMG_9899.jpg'
 import Link from 'next/link'
 import SectionHeading from './SectionHeading'
@@ -27,9 +26,9 @@ const OurChurch = () => {
                         <p className="mb-6">We invite you to join us and grow in the grace and knowledge of Jesus Christ our Savior. Through Him we are called out of darkness into God’s marvelous light.</p>
                        <div className="flex">
                             <Link href="/our-church">
-                                <a className="flex text-lg border-b border-custom-blue text-gray-800">
+                                <a className="flex text-lg font-medium px-5 py-2 rounded shadow-md bg-custom-blue text-gray-200">
                                     <span className="mr-2">Our Church</span>
-                                    <HiOutlineArrowNarrowRight className="self-center text-custom-blue" />
+                                    <FaChurch className="self-center" />
                                 </a>
                             </Link>
                        </div>

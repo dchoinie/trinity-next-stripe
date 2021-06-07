@@ -6,7 +6,7 @@ import Button from './Button'
 const Support = () => {
     return (
         <div className="stainedGlass h-screen flex">
-            <div className="self-center w-full" style={{ backgroundColor: 'rgba(255,255,255,0.3)', transform: 'skewY(-5deg)' }}>
+            <div className="self-center w-full" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }}>
                 <div className="max-w-screen-xl mx-auto">
                     <div className="flex w-full justify-between py-12">
                         <div className="flex flex-col">

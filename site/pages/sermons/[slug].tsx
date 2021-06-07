@@ -1,20 +1,24 @@
-import Client from '../../lib/sanity'
+import client from '../../lib/sanity'
 import groq from 'groq'
-import Layout from '../../components/layout/Layout'
 
-const Sermon = (props: any) => {
-    const { title, date, sermonPDF } = props
-    return (
-        <Layout>
-            <div className="mt-24 max-w-screen-xl mx-auto">
-                <article>
-                    {title}
-                    {date}
-                </article>
-                <a href={`${sermonPDF}?dl=`}>Sermon</a>
-            </div>
-        </Layout>
-    )
+interface SermonProps {
+	title: string,
+	date: string,
+	sermonPDF: any,
+}
+
+const sermon = (props: SermonProps) => {
+	const { title, date, sermonPDF } = props
+	return (
+		<div>
+			<p>
+				{title}
+			</p>
+			<p>
+				{date}
+			</p>
+		</div>
+	)
 }
 
 const query = groq`*[_type == "sermons" && slug.current == $slug][0]{
@@ -23,9 +27,9 @@ const query = groq`*[_type == "sermons" && slug.current == $slug][0]{
     "sermonPDF":sermon.asset->url
   }`
 
-Sermon.getInitialProps = async function(context: any) {
+sermon.getInitialProps = async function(context: any) {
     const { slug = "" } = context.query
-    return await Client.fetch(query, { slug })
+    return await client.fetch(query, { slug })
   }
 
-export default Sermon
+export default sermon

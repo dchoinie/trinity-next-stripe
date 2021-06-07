@@ -30,7 +30,7 @@ const ServiceTimes = () => {
                             dates2="Summer Months"
                             time1="7:45am &amp; 10:00am"
                             time2="9:00am"
-                            time3="7:00am"
+                            time3="7:00pm"
                             months1="(Sep - May)"
                             months2="(Jun - Aug)"
                             day1="Sundays"

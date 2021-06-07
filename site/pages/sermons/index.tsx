@@ -1,15 +1,23 @@
 import React from 'react'
 import Layout from '../../components/layout/Layout'
-import SectionHeading from '../../components/SectionHeading'
+import groq from 'groq'
+import client from '../../lib/sanity'
 
-const Sermon = () => {
+const sermons = (props: any) => {
+    const { sermons = [] } = props
+    console.log(sermons);
+    
     return (
         <Layout>
-            <div className="mt-24 max-w-screen-xl mx-auto">
-                <SectionHeading title="Sermons" />
-            </div>
+            <div className="mt-24"></div>
         </Layout>
     )
 }
 
-export default Sermon
+sermons.getInitialProps = async () => ({
+    sermon: await client.fetch(groq`
+      *[_type == "sermon"]
+    `)
+})
+
+export default sermons

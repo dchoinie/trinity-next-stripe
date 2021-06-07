@@ -44,8 +44,8 @@ const Header = (): JSX.Element => {
                                 </a>
                             </Link>
                         </li>
-                        <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1" onMouseEnter={():void => setIsResourcesOpen(true)} onMouseLeave={(): void => setIsResourcesOpen(false)}>
-                            <span className="traking-wide relative">Resources</span>
+                        <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1 cursor-pointer" onMouseEnter={():void => setIsResourcesOpen(true)} onMouseLeave={(): void => setIsResourcesOpen(false)}>
+                            <span className="traking-wide relative" onClick={():void => setIsResourcesOpen(!isResourcesOpen)}>Resources</span>
                             {isResourcesOpen && (
                                 <div className="absolute bg-gray-200 w-44 rounded shadow-md py-2 px-4">
                                     <ul className="flex-flex-col text-gray-800">

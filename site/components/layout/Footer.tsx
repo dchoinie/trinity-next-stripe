@@ -9,8 +9,6 @@ type Props = {
 }
 
 const Footer: React.FC<{verseData: any}> = ({verseData}) => {
-    console.log(verseData);
-    
     const navItems = [
         {
             name: 'Home',
