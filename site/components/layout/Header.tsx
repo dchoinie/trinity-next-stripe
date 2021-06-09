@@ -9,6 +9,7 @@ import { GrClose } from 'react-icons/gr'
 const Header = (): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)
     const [isResourcesOpen, setIsResourcesOpen] = useState(false)
+    const [isOurChurchOpen, setIsOurChurchOpen] = useState(false)
     return (
         <nav className="bg-custom-blue relative shadow-md">
             <div className="max-w-screen-xl block lg:flex lg:flex-row mx-auto py-3">
@@ -37,12 +38,34 @@ const Header = (): JSX.Element => {
                                 </a>
                             </Link>
                         </li>
-                        <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1">
-                            <Link href="/our-church">
-                                <a className="tracking-wide">
-                                    Our Church
-                                </a>
-                            </Link>
+                        <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1 cursor-pointer" onMouseEnter={():void => setIsOurChurchOpen(true)} onMouseLeave={(): void => setIsOurChurchOpen(false)}>
+                            <span className="traking-wide relative" onClick={():void => setIsOurChurchOpen(!isOurChurchOpen)}>Our Church</span>
+                            {isOurChurchOpen && (
+                                <div className="absolute bg-gray-200 w-44 rounded shadow-md py-2 px-4">
+                                    <ul className="flex-flex-col text-gray-800">
+                                        <li className="mt-2 mb-2">
+                                            <Link href="/who-we-are">
+                                                <a className="tracking-wide">Who We Are</a>
+                                            </Link>
+                                        </li>
+                                        <li className="mt-2 mb-2">
+                                            <Link href="/">
+                                                <a className="tracking-wide">What We Believe</a>
+                                            </Link>
+                                        </li>
+                                        <li className="mt-2 mb-2">
+                                            <Link href="/">
+                                                <a className="tracking-wide">Our Staff</a>
+                                            </Link>
+                                        </li>
+                                        <li className="mt-2 mb-2">
+                                            <Link href="/">
+                                                <a className="tracking-wide">Worship Schedule</a>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
                         </li>
                         <li className="text-gray-200 hover:text-white border-b border-transparent hover:border-white mt-1 cursor-pointer" onMouseEnter={():void => setIsResourcesOpen(true)} onMouseLeave={(): void => setIsResourcesOpen(false)}>
                             <span className="traking-wide relative" onClick={():void => setIsResourcesOpen(!isResourcesOpen)}>Resources</span>
