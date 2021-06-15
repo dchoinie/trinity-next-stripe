@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout'
 const termsConditions = () => {
     return (
         <Layout>
-            <div className="max-w-screen-xl mx-auto mb-12">
+            <div className="max-w-screen-xl mx-auto my-24">
                 <h4>Terms and Conditions</h4>
                 <p className="mb-2">Last updated: March 30, 2021</p>
                 <p className="mb-2">Please read these terms and conditions carefully before using Our Service.</p>

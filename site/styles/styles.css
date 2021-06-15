@@ -62,4 +62,9 @@ h6 {
   background-position: center;
 }
 
+.homepageGalleryImg {
+  aspect-ratio: 16 / 9;
+  max-height: 400px;
+}
+
 @tailwind utilities;

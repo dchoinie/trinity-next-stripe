@@ -131,7 +131,9 @@ const Footer: React.FC<{verseData: any}> = ({verseData}) => {
                 <div className="bg-custom-blue">
                     <div className="max-w-screen-xl mx-auto flex w-full justify-between py-6 text-gray-200">
                         <div className="flex">
-                            <span className="mr-4">Terms &amp; Conditions</span>
+                            <Link href="/terms-conditions">
+                                <a className="mr-2">Terms &amp; Conditions</a>
+                            </Link>
                             <span>Privacy Policy</span>
                         </div>
                         <div className="flex">

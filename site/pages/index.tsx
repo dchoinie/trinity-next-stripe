@@ -5,7 +5,7 @@ import Hero from '../components/Hero'
 import OurChurch from '../components/OurChurch'
 import ServiceTimes from '../components/ServiceTimes'
 import Support from '../components/Support'
-import Events from '../components/Events'
+import Gallery from '../components/Gallery'
 import fetch from 'node-fetch';
 
 export const getServerSideProps = async () => {
@@ -36,7 +36,7 @@ const IndexPage: NextPage<{data: any}> = ({data}) => {
       <OurChurch />
       <ServiceTimes />
       <Support />
-      <Events />
+      <Gallery />
     </Layout>
     </>
   )
