@@ -16,7 +16,6 @@ const WhoWeAreHeading = (props: whoWeAreHeadingProps): JSX.Element => {
                 <h4 className="self-center w-2/5 text-custom-blue">
                     {title}
                 </h4>
-                {/* <span className="self-center text-3xl w-1/5 flex justify-center"> - </span> */}
                 <p className="self-center w-3/5">
                     {desc}
                 </p>
