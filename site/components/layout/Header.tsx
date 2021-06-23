@@ -54,7 +54,7 @@ const Header = (): JSX.Element => {
                                             </Link>
                                         </li>
                                         <li className="mt-2 mb-2">
-                                            <Link href="/">
+                                            <Link href="/our-staff">
                                                 <a className="tracking-wide">Our Staff</a>
                                             </Link>
                                         </li>
