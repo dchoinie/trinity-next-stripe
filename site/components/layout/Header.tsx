@@ -59,7 +59,7 @@ const Header = (): JSX.Element => {
                                             </Link>
                                         </li>
                                         <li className="mt-2 mb-2">
-                                            <Link href="/">
+                                            <Link href="/worship-schedule">
                                                 <a className="tracking-wide">Worship Schedule</a>
                                             </Link>
                                         </li>
